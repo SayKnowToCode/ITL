@@ -29,7 +29,7 @@ export const register = async (user, dispatch) => {
 
 export const login = async (user, dispatch) => {
   dispatch({ type: 'START_LOADING' });
-
+  console.log("Here + ", url);
   const result = await fetchData({ url: url + '/login', body: user }, dispatch);
   if (result) {
     dispatch({ type: 'UPDATE_USER', payload: result });
